@@ -1,4 +1,17 @@
-### This app redirects to privacy friendly front-ends of popular services, such as YouTube, Twitter, Reddit, Imgur, Instagram, TikTok, etc. 
+## This app redirects to privacy friendly front-ends of popular services, such as YouTube, Twitter, Reddit, Imgur, Instagram, TikTok, etc. 
 
-## How-to
+<details>
+<summary>How-to</summary>
+<br>
+
 https://user-images.githubusercontent.com/108840615/223288669-367e8ac8-611e-44ea-b733-71e773ac6120.mp4
+
+</details>
+
+<details>
+<summary>Brave Browser Fix</summary>
+<br>
+
+https://user-images.githubusercontent.com/108840615/223290998-1ea8b286-56d2-4c90-a596-fca712b77559.mp4
+
+</details>
