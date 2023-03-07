@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             intent.data = uri
             startActivity(intent)
         }
-
         val url = intent?.dataString
         if (url != null) {
             handleIntent(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
@@ -75,10 +74,10 @@ class MainActivity : AppCompatActivity() {
             arrayOf("^https?://(www\\.)?google\\.com/(.*)?")),
         Service.EnglishWiki to ServiceInfo(
             arrayOf("wiki.froth.zone", "wikiless.esmailelbob.xyz", "wikiless.northboot.xyz", "wl.vern.cc"),
-            arrayOf("^https?://(en\\.wikipedia\\.org/(.*)?")),
+            arrayOf("^https?://en\\.wikipedia\\.org/(.*)?")),
         Service.GermanWiki to ServiceInfo(
             arrayOf("wiki.adminforge.de"),
-            arrayOf("^https?://(de\\.wikipedia\\.org/(.*)?")),
+            arrayOf("^https?://de\\.wikipedia\\.org/(.*)?")),
         Service.Instructables to ServiceInfo(
             arrayOf("destructables.esmailelbob.xyz"),
             arrayOf("^https?://(www\\.)?instructables\\.com/(.*)?")),
