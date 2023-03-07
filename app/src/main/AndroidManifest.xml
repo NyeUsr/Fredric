@@ -13,7 +13,8 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -55,8 +56,8 @@
             <data android:scheme="https" android:host="goodreads.com" />
             <data android:scheme="http" android:host="snopes.com" />
             <data android:scheme="https" android:host="snopes.com" />
-            <data android:scheme="http" android:host="www.google.com" />
-            <data android:scheme="https" android:host="www.google.com" />
+            <data android:scheme="http" android:host="www.google.com" android:pathPattern="/search?q=*" />
+            <data android:scheme="https" android:host="www.google.com" android:pathPattern="/search?q=*" />
             <data android:scheme="http" android:host="en.wikipedia.org" />
             <data android:scheme="https" android:host="en.wikipedia.org" />
             <data android:scheme="http" android:host="de.wikipedia.org" />

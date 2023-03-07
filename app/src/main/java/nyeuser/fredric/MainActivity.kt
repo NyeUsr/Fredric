@@ -130,7 +130,6 @@ class MainActivity : AppCompatActivity() {
         url?.let {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(it)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_NO_HISTORY or Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
             intent.setPackage(null)
             startActivity(intent)
         }
