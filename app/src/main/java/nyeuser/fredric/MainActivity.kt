@@ -106,16 +106,16 @@ class MainActivity : AppCompatActivity() {
                         startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(invidiousUrl)))
                         finish()
                         return
+                    } else if (info.patterns.any { Regex(it).matches(url ?: "") }) {
+                        try {
+                            val newUrl = replaceHostnameWithRandomInstance(url, info.instances)
+                            openUrlInDefaultBrowser(newUrl)
+                            finish()
+                        } catch (e: Exception) {
+                            Log.e("MainActivity", "Error replacing hostname with random instance", e)
+                        }
+                        return
                     }
-                } else if (info.patterns.any { Regex(it).matches(url ?: "") }) {
-                    try {
-                        val newUrl = replaceHostnameWithRandomInstance(url, info.instances)
-                        openUrlInDefaultBrowser(newUrl)
-                        finish()
-                    } catch (e: Exception) {
-                        Log.e("MainActivity", "Error replacing hostname with random instance", e)
-                    }
-                    return
                 }
             }
         }
