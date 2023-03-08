@@ -32,61 +32,61 @@ class MainActivity : AppCompatActivity() {
     private val services = mapOf(
         Service.YouTube to ServiceInfo(
             arrayOf("invidious.privacydev.net", "vid.puffyan.us", "inv.vern.cc", "invidious.kavin.rocks", "invidious.tiekoetter.com", "inv.riverside.rocks", "iv.ggtyler.dev", "invidious.nerdvpn.de"),
-            arrayOf("^https?://(www\\.)?youtube\\.com/(.*)?", "^https?://m\\.youtube\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?youtube\\.com/.*", "^https?://m\\.youtube\\.com/.*", "^https?://youtu\\.be/.*")),
         Service.Twitter to ServiceInfo(
             arrayOf("nitter.sneed.network", "canada.unofficialbird.com", "nitter.privacytools.io", "nitter.foss.wtf", "nitter.privacy.com.de", "nitter.1d4.us", "nitter.poast.org", "twitter.censors.us"),
-            arrayOf("^https?://(mobile\\.)?twitter\\.com/(.*)?", "^https?://twitter\\.com/(.*)?")),
+            arrayOf("^https?://(mobile\\.)?twitter\\.com/.*", "^https?://twitter\\.com/.*")),
         Service.Reddit to ServiceInfo(
             arrayOf("libreddit.eu.org", "libreddit.spike.codes", "lr.odyssey346.dev", "rd.funami.tech", "libreddit.dcs0.hu", "lr.vern.cc", "www.troddit.com"),
-            arrayOf("^https?://(www\\.)?reddit\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?reddit\\.com/.*")),
         Service.Imgur to ServiceInfo(
             arrayOf("rimgo.pussthecat.org", "rimgo.totaldarkness.net", "rimgo.vern.cc", "imgur.artemislena.eu", "rimgo.privacydev.net", "rimgo.bus-hit.me"),
-            arrayOf("^https?://((i|i\\.stack)\\.)?imgur\\.com/(.*)?")),
+            arrayOf("^https?://((i|i\\.stack)\\.)?imgur\\.com/.*")),
         Service.Instagram to ServiceInfo(
             arrayOf("bibliogram.froth.zone", "ig.tokhmi.xyz"),
-            arrayOf("^https?://(www\\.)?instagram\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?instagram\\.com/.*")),
         Service.TikTok to ServiceInfo(
             arrayOf("proxitok.pussthecat.org", "tok.habedieeh.re", "tok.artemislena.eu", "proxitok.privacydev.net"),
-            arrayOf("^https?://(www\\.)?tiktok\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?tiktok\\.com/.*")),
         Service.IMDb to ServiceInfo(
             arrayOf("ld.vern.cc", "libremdb.esmailelbob.xyz", "lmdb.tokhmi.xyz", "libremdb.iket.me", "libremdb.pussthecat.org"),
-            arrayOf("^https?://(www\\.)?imdb\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?imdb\\.com/.*")),
         Service.GoogleTranslate to ServiceInfo(
             arrayOf("simplytranslate.esmailelbob.xyz", "simplytranslate.org", "simplytranslate.manerakai.com", "translate.bus-hit.me", "translate.northboot.xyz", "translate.tiekoetter.com", "tl.vern.cc", "translate.slipfox.xyz"),
-            arrayOf("^https?://translate\\.google\\.com/(.*)?")),
+            arrayOf("^https?://translate\\.google\\.com/.*")),
         Service.Medium to ServiceInfo(
             arrayOf("scribe.rip", "scribe.nixnet.services", "scribe.citizen4.eu", "scribe.bus-hit.me", "scribe.froth.zone", "scribe.rawbit.ninja"),
-            arrayOf("^https?://medium\\.com/(.*)?")),
+            arrayOf("^https?://medium\\.com/.*")),
         Service.UrbanDict to ServiceInfo(
             arrayOf("rd.vern.cc", "ruraldictionary.esmailelbob.xyz"),
-            arrayOf("^https?://(www\\.)?urbandictionary\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?urbandictionary\\.com/.*")),
         Service.StackOverflow to ServiceInfo(
             arrayOf("code.whatever.social", "overflow.777.tf", "ao.vern.cc", "overflow.smnz.de", "anonymousoverflow.esmailelbob.xyz", "overflow.adminforge.de", "ao.foss.wtf", "overflow.hostux.net"),
-            arrayOf("^https?://stackoverflow\\.com/(.*)?")),
+            arrayOf("^https?://stackoverflow\\.com/.*")),
         Service.GoodReads to ServiceInfo(
             arrayOf("biblioreads.ml", "bl.vern.cc", "biblioreads.esmailelbob.xyz"),
-            arrayOf("^https?://(www\\.)?goodreads\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?goodreads\\.com/.*")),
         Service.Snopes to ServiceInfo(
             arrayOf("sd.vern.cc", "suds.esmailelbob.xyz"),
-            arrayOf("^https?://(www\\.)?snopes\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?snopes\\.com/.*")),
         Service.Google to ServiceInfo(
             arrayOf("whoogle.hostux.net", "wg.vern.cc", "whoogle.privacydev.net", "whoogle.dcs0.hu", "search.sethforprivacy.com"),
-            arrayOf("^https?://(www\\.)?google\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)google\\.com/search.*")),
         Service.EnglishWiki to ServiceInfo(
             arrayOf("wiki.froth.zone", "wikiless.esmailelbob.xyz", "wikiless.northboot.xyz", "wl.vern.cc"),
-            arrayOf("^https?://en\\.wikipedia\\.org/(.*)?")),
+            arrayOf("^https?://en\\.wikipedia\\.org/.*")),
         Service.GermanWiki to ServiceInfo(
             arrayOf("wiki.adminforge.de"),
-            arrayOf("^https?://de\\.wikipedia\\.org/(.*)?")),
+            arrayOf("^https?://de\\.wikipedia\\.org/.*")),
         Service.Instructables to ServiceInfo(
             arrayOf("destructables.esmailelbob.xyz"),
-            arrayOf("^https?://(www\\.)?instructables\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?instructables\\.com/.*")),
         Service.Reuters to ServiceInfo(
             arrayOf("neuters.de", "neuters.esmailelbob.xyz"),
-            arrayOf("^https?://(www\\.)?reuters\\.com/(.*)?")),
+            arrayOf("^https?://(www\\.)?reuters\\.com/.*")),
         Service.Odysee to ServiceInfo(
             arrayOf("lbry.projectsegfau.lt", "librarian.esmailelbob.xyz"),
-            arrayOf("^https?://odysee\\.com/(.*)?"))
+            arrayOf("^https?://odysee\\.com/.*"))
     )
 
     override fun onNewIntent(intent: Intent?) {
@@ -99,7 +99,15 @@ class MainActivity : AppCompatActivity() {
             val url = intent.dataString
             Log.d("MainActivity", "Received intent with url: $url")
             services.forEach { (_, info) ->
-                if (info.patterns.any { Regex(it).matches(url ?: "") }) {
+                if (url != null) {
+                    if (url.startsWith("https://youtu.be/")) {
+                        val videoId = url.substringAfterLast("/", "")
+                        val invidiousUrl = "https://${services[Service.YouTube]!!.instances.random()}/watch?v=$videoId"
+                        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(invidiousUrl)))
+                        finish()
+                        return
+                    }
+                } else if (info.patterns.any { Regex(it).matches(url ?: "") }) {
                     try {
                         val newUrl = replaceHostnameWithRandomInstance(url, info.instances)
                         openUrlInDefaultBrowser(newUrl)
@@ -112,7 +120,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     private fun replaceHostnameWithRandomInstance(url: String?, instances: Array<String>): String? {
         if (url != null) {
             val parsedUrl = URL(url)

@@ -26,46 +26,52 @@
             <category android:name="android.intent.category.BROWSABLE" />
             <data android:scheme="http" android:host="www.youtube.com" />
             <data android:scheme="https" android:host="www.youtube.com" />
+            <data android:scheme="http" android:host="www.youtube-nocookie.com" />
+            <data android:scheme="https" android:host="www.youtube-nocookie.com" />
             <data android:scheme="http" android:host="m.youtube.com" />
             <data android:scheme="https" android:host="m.youtube.com" />
+            <data android:scheme="http" android:host="youtu.be" />
+            <data android:scheme="https" android:host="youtu.be" />
             <data android:scheme="http" android:host="twitter.com" />
             <data android:scheme="https" android:host="twitter.com" />
             <data android:scheme="http" android:host="mobile.twitter.com" />
             <data android:scheme="https" android:host="mobile.twitter.com" />
-            <data android:scheme="http" android:host="reddit.com" />
-            <data android:scheme="https" android:host="reddit.com" />
+            <data android:scheme="http" android:host="www.reddit.com" />
+            <data android:scheme="https" android:host="www.reddit.com" />
             <data android:scheme="http" android:host="imgur.com" />
             <data android:scheme="https" android:host="imgur.com" />
-            <data android:scheme="http" android:host="instagram.com" />
-            <data android:scheme="https" android:host="instagram.com" />
-            <data android:scheme="http" android:host="tiktok.com" />
-            <data android:scheme="https" android:host="tiktok.com" />
-            <data android:scheme="http" android:host="imdb.com" />
-            <data android:scheme="https" android:host="imdb.com" />
+            <data android:scheme="http" android:host="i.imgur.com" />
+            <data android:scheme="https" android:host="i.imgur.com" />
+            <data android:scheme="http" android:host="www.instagram.com" />
+            <data android:scheme="https" android:host="www.instagram.com" />
+            <data android:scheme="http" android:host="www.tiktok.com" />
+            <data android:scheme="https" android:host="www.tiktok.com" />
+            <data android:scheme="http" android:host="www.imdb.com" />
+            <data android:scheme="https" android:host="www.imdb.com" />
             <data android:scheme="http" android:host="translate.google.com" />
             <data android:scheme="https" android:host="translate.google.com" />
             <data android:scheme="http" android:host="translate.google.com" />
             <data android:scheme="https" android:host="translate.google.com" />
             <data android:scheme="http" android:host="medium.com" />
             <data android:scheme="https" android:host="medium.com" />
-            <data android:scheme="http" android:host="urbandictionary.com" />
-            <data android:scheme="https" android:host="urbandictionary.com" />
+            <data android:scheme="http" android:host="www.urbandictionary.com" />
+            <data android:scheme="https" android:host="www.urbandictionary.com" />
             <data android:scheme="http" android:host="stackoverflow.com" />
             <data android:scheme="https" android:host="stackoverflow.com" />
-            <data android:scheme="http" android:host="goodreads.com" />
-            <data android:scheme="https" android:host="goodreads.com" />
-            <data android:scheme="http" android:host="snopes.com" />
-            <data android:scheme="https" android:host="snopes.com" />
-            <data android:scheme="http" android:host="www.google.com" android:pathPattern="/search?q=*" />
-            <data android:scheme="https" android:host="www.google.com" android:pathPattern="/search?q=*" />
+            <data android:scheme="http" android:host="www.goodreads.com" />
+            <data android:scheme="https" android:host="www.goodreads.com" />
+            <data android:scheme="http" android:host="www.snopes.com" />
+            <data android:scheme="https" android:host="www.snopes.com" />
+            <data android:scheme="http" android:host="www.google.com" />
+            <data android:scheme="https" android:host="www.google.com" />
             <data android:scheme="http" android:host="en.wikipedia.org" />
             <data android:scheme="https" android:host="en.wikipedia.org" />
             <data android:scheme="http" android:host="de.wikipedia.org" />
             <data android:scheme="https" android:host="de.wikipedia.org" />
-            <data android:scheme="http" android:host="instructables.com" />
-            <data android:scheme="https" android:host="instructables.com" />
-            <data android:scheme="http" android:host="reuters.com" />
-            <data android:scheme="https" android:host="reuters.com" />
+            <data android:scheme="http" android:host="www.instructables.com" />
+            <data android:scheme="https" android:host="www.instructables.com" />
+            <data android:scheme="http" android:host="www.reuters.com" />
+            <data android:scheme="https" android:host="www.reuters.com" />
             <data android:scheme="http" android:host="odysee.com" />
             <data android:scheme="https" android:host="odysee.com" />
             </intent-filter>
