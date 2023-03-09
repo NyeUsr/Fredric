@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -13,68 +13,52 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:excludeFromRecents="true">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <!-- Must remain separated -->
-            <intent-filter>
+            </activity>
+
+        <activity
+            android:name=".Services"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true">
+        <intent-filter>
             <action android:name="android.intent.action.VIEW" />
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
-            <data android:scheme="http" android:host="www.youtube.com" />
-            <data android:scheme="https" android:host="www.youtube.com" />
-            <data android:scheme="http" android:host="www.youtube-nocookie.com" />
-            <data android:scheme="https" android:host="www.youtube-nocookie.com" />
-            <data android:scheme="http" android:host="m.youtube.com" />
-            <data android:scheme="https" android:host="m.youtube.com" />
-            <data android:scheme="http" android:host="youtu.be" />
-            <data android:scheme="https" android:host="youtu.be" />
-            <data android:scheme="http" android:host="twitter.com" />
-            <data android:scheme="https" android:host="twitter.com" />
-            <data android:scheme="http" android:host="mobile.twitter.com" />
-            <data android:scheme="https" android:host="mobile.twitter.com" />
-            <data android:scheme="http" android:host="www.reddit.com" />
-            <data android:scheme="https" android:host="www.reddit.com" />
-            <data android:scheme="http" android:host="imgur.com" />
-            <data android:scheme="https" android:host="imgur.com" />
-            <data android:scheme="http" android:host="i.imgur.com" />
-            <data android:scheme="https" android:host="i.imgur.com" />
-            <data android:scheme="http" android:host="www.instagram.com" />
-            <data android:scheme="https" android:host="www.instagram.com" />
-            <data android:scheme="http" android:host="www.tiktok.com" />
-            <data android:scheme="https" android:host="www.tiktok.com" />
-            <data android:scheme="http" android:host="www.imdb.com" />
-            <data android:scheme="https" android:host="www.imdb.com" />
-            <data android:scheme="http" android:host="translate.google.com" />
-            <data android:scheme="https" android:host="translate.google.com" />
-            <data android:scheme="http" android:host="translate.google.com" />
-            <data android:scheme="https" android:host="translate.google.com" />
-            <data android:scheme="http" android:host="medium.com" />
-            <data android:scheme="https" android:host="medium.com" />
-            <data android:scheme="http" android:host="www.urbandictionary.com" />
-            <data android:scheme="https" android:host="www.urbandictionary.com" />
-            <data android:scheme="http" android:host="stackoverflow.com" />
-            <data android:scheme="https" android:host="stackoverflow.com" />
-            <data android:scheme="http" android:host="www.goodreads.com" />
-            <data android:scheme="https" android:host="www.goodreads.com" />
-            <data android:scheme="http" android:host="www.snopes.com" />
-            <data android:scheme="https" android:host="www.snopes.com" />
-            <data android:scheme="http" android:host="www.google.com" />
-            <data android:scheme="https" android:host="www.google.com" />
-            <data android:scheme="http" android:host="en.wikipedia.org" />
-            <data android:scheme="https" android:host="en.wikipedia.org" />
-            <data android:scheme="http" android:host="de.wikipedia.org" />
-            <data android:scheme="https" android:host="de.wikipedia.org" />
-            <data android:scheme="http" android:host="www.instructables.com" />
-            <data android:scheme="https" android:host="www.instructables.com" />
-            <data android:scheme="http" android:host="www.reuters.com" />
-            <data android:scheme="https" android:host="www.reuters.com" />
-            <data android:scheme="http" android:host="odysee.com" />
-            <data android:scheme="https" android:host="odysee.com" />
-            </intent-filter>
+
+            <data android:scheme="https" />
+            <data android:scheme="http" />
+
+            <data android:host="www.youtube.com" />
+            <data android:host="www.youtube-nocookie.com" />
+            <data android:host="m.youtube.com" />
+            <data android:host="youtu.be" />
+            <data android:host="twitter.com" />
+            <data android:host="mobile.twitter.com" />
+            <data android:host="www.reddit.com" />
+            <data android:host="imgur.com" />
+            <data android:host="i.imgur.com" />
+            <data android:host="www.instagram.com" />
+            <data android:host="www.tiktok.com" />
+            <data android:host="www.imdb.com" />
+            <data android:host="translate.google.com" />
+            <data android:host="translate.google.com" />
+            <data android:host="medium.com" />
+            <data android:host="www.urbandictionary.com" />
+            <data android:host="stackoverflow.com" />
+            <data android:host="www.goodreads.com" />
+            <data android:host="www.snopes.com" />
+            <data android:host="www.google.com" />
+            <data android:host="en.wikipedia.org" />
+            <data android:host="de.wikipedia.org" />
+            <data android:host="www.instructables.com" />
+            <data android:host="www.reuters.com" />
+            <data android:host="odysee.com" />
+        </intent-filter>
         </activity>
     </application>
 
