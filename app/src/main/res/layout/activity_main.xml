@@ -33,5 +33,4 @@
         app:srcCompat="@drawable/github"
         tools:ignore="RedundantDescriptionCheck" />
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

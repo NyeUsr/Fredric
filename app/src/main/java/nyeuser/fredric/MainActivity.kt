@@ -1,16 +1,12 @@
 package nyeuser.fredric
 
-import android.content.BroadcastReceiver
-import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,11 +25,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/NyeUsr/Fredric"))
             startActivity(intent)
         }
-        applicationContext.registerReceiver(object : BroadcastReceiver() {
-            override fun onReceive(context: Context?, intent: Intent?) {
-                recreate()
-            }
-        }, IntentFilter(Intent.ACTION_CONFIGURATION_CHANGED))
-
     }
 }
