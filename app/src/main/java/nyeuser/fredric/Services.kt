@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import java.net.URL
@@ -13,7 +12,7 @@ class Services : AppCompatActivity() {
 
     private val services = mapOf(
         Service.YouTube to ServiceInfo(
-            arrayOf("invidious.privacydev.net", "vid.puffyan.us", "inv.vern.cc", "invidious.kavin.rocks", "invidious.tiekoetter.com", "inv.riverside.rocks", "iv.ggtyler.dev", "invidious.nerdvpn.de"),
+            arrayOf("piped.video", "piped.pages.dev", "watch.leptons.xyz", "piped.garudalinux.org", "piped.syncpundit.io", "piped.mha.fi", "watch.whatever.social", "piped.kavin.rocks"),
             arrayOf("^https?://(www\\.)?youtube\\.com/.*", "^https?://m\\.youtube\\.com/.*", "^https?://youtu\\.be/.*")),
         Service.Twitter to ServiceInfo(
             arrayOf("nitter.sneed.network", "canada.unofficialbird.com", "nitter.privacytools.io", "nitter.foss.wtf", "nitter.privacy.com.de", "nitter.1d4.us", "nitter.poast.org", "twitter.censors.us"),
@@ -43,7 +42,7 @@ class Services : AppCompatActivity() {
             arrayOf("rd.vern.cc", "ruraldictionary.esmailelbob.xyz"),
             arrayOf("^https?://(www\\.)?urbandictionary\\.com/.*")),
         Service.StackOverflow to ServiceInfo(
-            arrayOf("code.whatever.social", "overflow.777.tf", "ao.vern.cc", "overflow.smnz.de", "anonymousoverflow.esmailelbob.xyz", "overflow.adminforge.de", "ao.foss.wtf", "overflow.hostux.net"),
+            arrayOf("code.whatever.social", "ao.vern.cc", "overflow.smnz.de", "anonymousoverflow.esmailelbob.xyz", "overflow.adminforge.de", "ao.foss.wtf", "overflow.hostux.net"),
             arrayOf("^https?://stackoverflow\\.com/.*")),
         Service.GoodReads to ServiceInfo(
             arrayOf("biblioreads.ml", "bl.vern.cc", "biblioreads.esmailelbob.xyz"),
@@ -68,7 +67,13 @@ class Services : AppCompatActivity() {
             arrayOf("^https?://(www\\.)?reuters\\.com/.*")),
         Service.Odysee to ServiceInfo(
             arrayOf("lbry.projectsegfau.lt", "librarian.esmailelbob.xyz"),
-            arrayOf("^https?://odysee\\.com/.*"))
+            arrayOf("^https?://odysee\\.com/.*")),
+        Service.Wolfram to ServiceInfo(
+            arrayOf("wolfree.chickenkiller.com", "wolfree.crabdance.com", "wolfree.gitlab.io", "wolfree.ignorelist.com", "wolfree.jumpingcrab.com", "wolfree.my.to", "wolfree.netlify.app", "wolfree.onrender.com", "wolfree.pages.dev", "wolfree.privatedns.org", "wolfree.strangled.net"),
+            arrayOf("^https?://(www\\.)?wolframalpha\\.com/.*")),
+        Service.GitHub to ServiceInfo(
+            arrayOf("gh.odyssey346.dev", "gh.riverside.rocks", "gh.vern.cc", "gh.akisblack.dev", "gh.phreedom.club"),
+            arrayOf("^https?://github\\.com/.*"))
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,7 +102,6 @@ class Services : AppCompatActivity() {
     private fun handleIntent(intent: Intent?) {
         if (intent?.action == Intent.ACTION_VIEW) {
             val url = intent.dataString
-            Log.d("MainActivity", "Received intent with url: $url")
             services.forEach { (_, info) ->
                 if (url != null) {
                     if (url.startsWith("https://youtu.be/")) {
@@ -111,8 +115,7 @@ class Services : AppCompatActivity() {
                             val newUrl = randomInstance(url, info.instances)
                             openIn(newUrl)
                             finish()
-                        } catch (e: Exception) {
-                            Log.e("MainActivity", "Error replacing hostname with random instance", e)
+                        } catch (_: Exception) {
                         }
                         return
                     }
@@ -167,4 +170,4 @@ data class ServiceInfo(
     }
 }
 
-enum class Service { YouTube, Twitter, Reddit, Imgur, Instagram, TikTok, IMDb, GoogleTranslate, Medium, UrbanDict, StackOverflow, GoodReads, Snopes, Google, EnglishWiki, GermanWiki, Instructables, Reuters, Odysee }
+enum class Service { YouTube, Twitter, Reddit, Imgur, Instagram, TikTok, IMDb, GoogleTranslate, Medium, UrbanDict, StackOverflow, GoodReads, Snopes, Google, EnglishWiki, GermanWiki, Instructables, Reuters, Odysee, Wolfram, GitHub }

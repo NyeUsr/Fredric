@@ -67,6 +67,8 @@
             <data android:host="www.instructables.com" />
             <data android:host="www.reuters.com" />
             <data android:host="odysee.com" />
+            <data android:host="www.wolframalpha.com" />
+            <data android:host="github.com" />
         </intent-filter>
         </activity>
     </application>
