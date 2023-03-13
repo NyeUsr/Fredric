@@ -1,4 +1,4 @@
-## This app redirects to privacy friendly front-ends of popular services, such as YouTube, Twitter, Reddit, Imgur, Instagram, TikTok, etc. 
+## This app is ***only*** for Android 12+
 
 ## Setup
 <details>
