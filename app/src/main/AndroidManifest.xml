@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <queries>
+        <package android:name="com.android.chrome" />
+        <package android:name="com.brave.browser" />
+        <package android:name="org.mozilla.firefox_beta" />
+    </queries>
+
     <application
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -43,6 +49,7 @@
             <data android:host="twitter.com" />
             <data android:host="mobile.twitter.com" />
             <data android:host="www.reddit.com" />
+            <data android:host="old.reddit.com" />
             <data android:host="reddit.com" />
             <data android:host="imgur.com" />
             <data android:host="i.imgur.com" />

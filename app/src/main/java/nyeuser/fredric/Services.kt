@@ -12,14 +12,14 @@ class Services : AppCompatActivity() {
 
     private val services = mapOf(
         Service.YouTube to ServiceInfo(
-            arrayOf("piped.video", "piped.pages.dev", "watch.leptons.xyz", "piped.garudalinux.org", "piped.syncpundit.io", "piped.mha.fi", "watch.whatever.social", "piped.kavin.rocks"),
+            arrayOf("invidious.privacydev.net", "vid.puffyan.us", "inv.vern.cc", "invidious.kavin.rocks", "invidious.tiekoetter.com", "inv.riverside.rocks", "iv.ggtyler.dev", "invidious.nerdvpn.de"),
             arrayOf("^https?://(www\\.)?youtube\\.com/.*", "^https?://m\\.youtube\\.com/.*", "^https?://youtu\\.be/.*")),
         Service.Twitter to ServiceInfo(
             arrayOf("nitter.sneed.network", "canada.unofficialbird.com", "nitter.privacytools.io", "nitter.foss.wtf", "nitter.privacy.com.de", "nitter.1d4.us", "nitter.poast.org", "twitter.censors.us"),
             arrayOf("^https?://(mobile\\.)?twitter\\.com/.*", "^https?://twitter\\.com/.*")),
         Service.Reddit to ServiceInfo(
             arrayOf("libreddit.eu.org", "libreddit.spike.codes", "lr.odyssey346.dev", "rd.funami.tech", "libreddit.dcs0.hu", "lr.vern.cc", "www.troddit.com"),
-            arrayOf("^https?://(www\\.)?reddit\\.com/.*")),
+            arrayOf("^https?://(www\\.|old\\.)?reddit\\.com/.*")),
         Service.Imgur to ServiceInfo(
             arrayOf("rimgo.pussthecat.org", "rimgo.totaldarkness.net", "rimgo.vern.cc", "imgur.artemislena.eu", "rimgo.privacydev.net", "rimgo.bus-hit.me"),
             arrayOf("^https?://((i|i\\.stack)\\.)?imgur\\.com/.*")),
